@@ -1,0 +1,48 @@
+.definitions {
+  padding-top: 50px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.definitions-buttons {
+  display: flex;
+  margin-bottom: 20px;
+  gap: 30px;
+}
+
+.definitions-buttons > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.left-column {
+  align-items: flex-start;
+}
+
+.right-column {
+  align-items: flex-end;
+}
+
+.definitions-texts {
+  padding: 50px;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.definitions-texts p {
+  display: flex;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+@media (max-width: 768px) {
+  .definitions {
+    height: 500px;
+  }
+}

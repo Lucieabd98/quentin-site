@@ -1,0 +1,28 @@
+header {
+  height: 80px;
+  /* border: red 2px solid; */
+  position: sticky;
+  top: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  z-index: 1000;
+  background-color: #0a1b2a;
+  /* border-bottom: 1px solid white; */
+  margin-bottom: 4px;
+}
+
+header ul {
+  display: flex;
+  gap: 25px;
+  font-weight: normal;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+.link:hover {
+  cursor: pointer;
+}

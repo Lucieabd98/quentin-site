@@ -1,0 +1,39 @@
+.buttons-portfolio .not-selected {
+  color: white;
+  background-color: transparent;
+  border: none;
+  padding: 20px 80px;
+  border-radius: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.buttons-portfolio {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.buttons-portfolio .selected {
+  background-color: #0c2a40;
+  border: none;
+  padding: 20px 80px;
+  border-radius: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.buttons-portfolio button:hover {
+  background-color: #0c2a40;
+}
+
+.portfolio-content {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

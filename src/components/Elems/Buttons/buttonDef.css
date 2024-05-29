@@ -1,0 +1,34 @@
+.notSelected {
+  color: white;
+  background-color: transparent;
+  border: none;
+  padding: 8px 25px;
+  border-radius: 15px;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.selected {
+  color: white;
+  background-color: #0c2a40;
+  border: none;
+  padding: 8px 25px;
+  border-radius: 15px;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+button:hover {
+  background-color: #0c2a40;
+}
+
+@media (max-width: 768px) {
+  .selected,
+  .notSelected {
+    font-size: 23px;
+  }
+}

@@ -1,0 +1,17 @@
+.contact-container {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contact-infos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact-container .right-column {
+  display: flex;
+  flex-direction: column;
+}

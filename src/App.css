@@ -1,0 +1,19 @@
+@import "./assets/fonts/stylesheet.css";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Futura";
+  background-color: #0a1b2a;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+p {
+  font-size: 18px;
+}
