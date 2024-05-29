@@ -8,11 +8,11 @@ const Contact = () => {
         <div className="left-column">
           <p>quentin.abadia@gmail.com</p>
         </div>
-        <div className="right-column">
+        {/* <div className="right-column">
           <input type="text" />
           <input type="text" />
           <input type="text" />
-        </div>
+        </div> */}
       </div>
     </div>
   );

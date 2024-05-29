@@ -11,10 +11,16 @@
   align-items: center;
   justify-content: flex-start;
   gap: 30px;
+  flex: 1 1 240px;
 }
 
 @media (max-width: 768px) {
   .audio-details {
-    width: 550px;
+    flex: 1 1 100%;
+    /* Full width on smaller screens */
+  }
+  .podcast {
+    width: 230px;
+    height: 240px;
   }
 }

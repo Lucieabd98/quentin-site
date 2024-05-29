@@ -7,7 +7,6 @@ import { useState, useEffect, useRef } from "react";
 const Portfolio = () => {
   const [selectedButton, setSelectedButton] = useState("Video");
   const [selectedVideo, setSelectedVideo] = useState(null);
-  const [selectedAudio, setSelectedAudio] = useState(null);
   const videoDetailsRef = useRef(null); // Référence à l'élément de détail de la vidéo
 
   const handleClick = (title) => {
@@ -51,10 +50,7 @@ const Portfolio = () => {
             setSelectedVideo={setSelectedVideo}
           />
         ) : (
-          <Audio
-            selectedAudio={selectedAudio}
-            setSelectedAudio={setSelectedAudio}
-          />
+          <Audio />
         )}
       </div>
       <Separator />
