@@ -26,3 +26,12 @@ h1 {
 .link:hover {
   cursor: pointer;
 }
+
+@media (max-width: 480px) {
+  header ul {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+}

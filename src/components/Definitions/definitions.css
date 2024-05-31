@@ -46,3 +46,17 @@
     height: 500px;
   }
 }
+
+@media (max-width: 480px) {
+  .definitions-texts {
+    padding: 10px;
+  }
+  .definitions-texts p {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 360px) {
+}

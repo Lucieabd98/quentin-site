@@ -37,3 +37,13 @@
   justify-content: center;
   align-items: center;
 }
+
+@media (max-width: 480px) {
+  .buttons-portfolio .not-selected,
+  .buttons-portfolio .selected {
+    padding: 20px 50px;
+  }
+}
+
+@media (max-width: 360px) {
+}

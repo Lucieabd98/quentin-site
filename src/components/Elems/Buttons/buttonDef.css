@@ -32,3 +32,14 @@ button:hover {
     font-size: 23px;
   }
 }
+
+@media (max-width: 480px) {
+  .selected,
+  .notSelected {
+    font-size: 20px;
+    padding: 5px 18px;
+  }
+}
+
+@media (max-width: 360px) {
+}
