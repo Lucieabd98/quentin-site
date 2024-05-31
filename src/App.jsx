@@ -18,8 +18,8 @@ library.add(faXmark);
 function App() {
   return (
     <>
+      <Header />
       <Container>
-        <Header />
         <Definitions />
         <Element name="portfolio">
           <Portfolio />

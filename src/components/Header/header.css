@@ -1,15 +1,28 @@
+/* .container {
+
+
+
+} */
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
 header {
-  height: 80px;
-  /* border: red 2px solid; */
   position: sticky;
-  top: 0px;
+  top: 0;
+  height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 18px;
   z-index: 1000;
   background-color: #0a1b2a;
-  /* border-bottom: 1px solid white; */
   margin-bottom: 4px;
 }
 
@@ -30,6 +43,9 @@ h1 {
 @media (max-width: 480px) {
   header ul {
     gap: 10px;
+  }
+  .container {
+    padding: 0 10px;
   }
 }
 

@@ -8,8 +8,7 @@
 
 .definitions-buttons {
   display: flex;
-  margin-bottom: 20px;
-  gap: 30px;
+  gap: 100px;
 }
 
 .definitions-buttons > div {
@@ -44,6 +43,9 @@
 @media (max-width: 768px) {
   .definitions {
     height: 500px;
+  }
+  .definitions-buttons {
+    gap: 0;
   }
 }
 
