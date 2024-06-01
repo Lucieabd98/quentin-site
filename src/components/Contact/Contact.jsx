@@ -3,6 +3,9 @@ import { useState } from "react";
 
 const Contact = () => {
   const [name, setName] = useState("");
+  const [mail, setMail] = useState("");
+  const [message, setMessage] = useState("");
+
   return (
     <div className="contact-container">
       <h2>Contact</h2>
@@ -34,9 +37,30 @@ const Contact = () => {
                 setName(event.target.value);
               }}
             />
-            {/* <input type="email" name="email" required placeholder="Mail" />
-            <textarea name="message" required placeholder="Message"></textarea> */}
-            <button type="submit">Envoyer</button>
+            <input
+              type="email"
+              name="email"
+              id="mail"
+              required
+              placeholder="Mail"
+              value={mail}
+              onChange={(event) => {
+                setMail(event.target.value);
+              }}
+            />
+            <textarea
+              name="message"
+              id="message"
+              required
+              placeholder="Message"
+              value={message}
+              onChange={(event) => {
+                setMessage(event.target.value);
+              }}
+            ></textarea>
+            <button className="submit-form" type="submit">
+              Envoyer
+            </button>
           </form>
         </div>
       </div>

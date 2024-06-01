@@ -12,3 +12,9 @@
   font-weight: 400;
   padding-bottom: 30px;
 }
+
+@media (max-width: 480px) {
+  .about-text p {
+    font-size: 15px;
+  }
+}

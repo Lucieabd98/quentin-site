@@ -1,13 +1,12 @@
 .contact-container {
-  height: 300px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 50px;
+  padding-bottom: 100px;
 }
 
 .contact-infos {
   display: flex;
-  align-items: center;
   justify-content: space-between;
 }
 
@@ -23,14 +22,60 @@
 form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
+}
+
+input,
+textarea,
+button.submit-form {
+  background-color: transparent;
+  border: white 1px solid;
+  border-radius: 8px;
+  color: white;
+  font-family: "Futura";
+  font-size: 15px;
 }
 
 input,
 textarea {
-  background-color: transparent;
-  border: white 1px solid;
-  border-radius: 8px;
-  padding: 7px 16px;
+  padding: 10px 200px 10px 10px;
+}
+
+::placeholder {
   color: white;
+  font-family: "Futura";
+  justify-self: center;
+}
+
+textarea {
+  height: 100px;
+}
+
+button.submit-form {
+  width: 50%;
+  justify-self: center;
+  align-self: center;
+  padding: 5px 10px;
+}
+
+@media (max-width: 768px) {
+  input,
+  textarea {
+    padding: 10px 150px 10px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-infos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  input,
+  textarea {
+    padding: 5px 8px;
+  }
+  .left-column p {
+    font-size: 15px;
+  }
 }
