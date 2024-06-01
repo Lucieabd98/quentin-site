@@ -39,7 +39,7 @@ const Contact = () => {
             />
             <input
               type="email"
-              name="email"
+              name="mail"
               id="mail"
               required
               placeholder="Mail"
