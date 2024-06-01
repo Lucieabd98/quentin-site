@@ -1,6 +1,8 @@
 import "./contact.css";
+import { useState } from "react";
 
 const Contact = () => {
+  const [name, setName] = useState("");
   return (
     <div className="contact-container">
       <h2>Contact</h2>
@@ -14,7 +16,6 @@ const Contact = () => {
             method="POST"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
-            action="/thanks"
           >
             <input type="hidden" name="form-name" value="contact" />
             <p className="hidden">
@@ -22,9 +23,19 @@ const Contact = () => {
                 Don’t fill this out: <input name="bot-field" />
               </label>
             </p>
-            <input type="text" name="name" required placeholder="Nom" />
-            <input type="email" name="email" required placeholder="Mail" />
-            <textarea name="message" required placeholder="Message"></textarea>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              required
+              placeholder="Nom"
+              value={name}
+              onChange={(event) => {
+                setName(event.target.value);
+              }}
+            />
+            {/* <input type="email" name="email" required placeholder="Mail" />
+            <textarea name="message" required placeholder="Message"></textarea> */}
             <button type="submit">Envoyer</button>
           </form>
         </div>
