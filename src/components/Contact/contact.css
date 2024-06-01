@@ -23,11 +23,11 @@ form {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  position: relative;
 }
 
 input,
-textarea,
-button.submit-form {
+textarea {
   background-color: transparent;
   border: white 1px solid;
   border-radius: 8px;
@@ -47,15 +47,26 @@ textarea {
   justify-self: center;
 }
 
-textarea {
+form textarea {
   height: 100px;
 }
 
-button.submit-form {
-  width: 50%;
+.submit-form {
   justify-self: center;
   align-self: center;
-  padding: 5px 10px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  position: absolute;
+
+  top: 180px;
+  left: 310px;
+}
+
+button.submit-form:hover {
+  background-color: transparent;
 }
 
 @media (max-width: 768px) {
@@ -63,13 +74,14 @@ button.submit-form {
   textarea {
     padding: 10px 150px 10px 10px;
   }
+  .submit-form {
+    left: 270px;
+  }
 }
 
 @media (max-width: 480px) {
   .contact-infos {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
   }
   input,
   textarea {
@@ -77,5 +89,9 @@ button.submit-form {
   }
   .left-column p {
     font-size: 15px;
+  }
+  .submit-form {
+    top: 160px;
+    left: 120px;
   }
 }

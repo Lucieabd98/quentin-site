@@ -1,5 +1,6 @@
 import "./contact.css";
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -59,7 +60,7 @@ const Contact = () => {
               }}
             ></textarea>
             <button className="submit-form" type="submit">
-              Envoyer
+              <FontAwesomeIcon icon="paper-plane" className="paper-plane" />
             </button>
           </form>
         </div>

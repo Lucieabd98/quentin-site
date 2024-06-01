@@ -3,11 +3,17 @@ import { Link } from "react-scroll";
 
 const Header = () => {
   const headerHeight = 80;
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <header>
       <div className="container">
         <div>
-          <h1>Quentin Abadia</h1>
+          <h1 onClick={scrollToTop}>Quentin Abadia</h1>
         </div>
         <div>
           <nav>

@@ -57,15 +57,20 @@
 @media (max-width: 480px) {
   .video-details {
     width: 90%;
-    gap: 10px;
     padding: 10px 10px 50px 10px;
   }
   .video-details-description {
     margin-top: 0px;
     width: 90%;
   }
+  .video-details-description p {
+    font-size: 15px;
+  }
   .icon-cross {
     font-size: 25px;
+  }
+  iframe {
+    height: 200px;
   }
 }
 

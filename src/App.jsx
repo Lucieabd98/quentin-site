@@ -12,8 +12,8 @@ import Contact from "./components/Contact/Contact";
 
 // Import des icônes
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faXmark } from "@fortawesome/free-solid-svg-icons";
-library.add(faXmark);
+import { faXmark, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+library.add(faXmark, faPaperPlane);
 
 function App() {
   return (
