@@ -8,11 +8,25 @@ const Contact = () => {
         <div className="left-column">
           <p>quentin.abadia@gmail.com</p>
         </div>
-        {/* <div className="right-column">
-          <input type="text" />
-          <input type="text" />
-          <input type="text" />
-        </div> */}
+        <div className="right-column">
+          <form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+          >
+            <input type="hidden" name="form-name" value="contact" />
+            <p className="hidden">
+              <label>
+                Don’t fill this out: <input name="bot-field" />
+              </label>
+            </p>
+            <input type="text" name="name" required placeholder="Nom" />
+            <input type="email" name="email" required placeholder="Mail" />
+            <textarea name="message" required placeholder="Message"></textarea>
+            <button type="submit">Envoyer</button>
+          </form>
+        </div>
       </div>
     </div>
   );
