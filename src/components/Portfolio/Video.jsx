@@ -16,7 +16,6 @@ const Video = ({ setSelectedVideo, selectedVideo }) => {
   return (
     <div className="video-gallery">
       <Helmet>
-        <title>Vidéos - Quentin Abadia</title>
         <meta
           name="description"
           content="Découvrez les projets musicaux en vidéos de Quentin Abadia dans son portfolio."

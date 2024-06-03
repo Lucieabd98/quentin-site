@@ -27,7 +27,6 @@ const Portfolio = () => {
   return (
     <div ref={videoDetailsRef}>
       <Helmet>
-        <title>Portfolio - Quentin Abadia</title>
         <meta
           name="description"
           content="Découvrez les projets musicaux de Quentin Abadia dans son portfolio."

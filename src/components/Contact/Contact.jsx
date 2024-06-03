@@ -11,7 +11,6 @@ const Contact = () => {
   return (
     <div className="contact-container">
       <Helmet>
-        <title>Contact - Quentin Abadia</title>
         <meta
           name="description"
           content="Remplissez vos informations afin d'être contacté par Quentin Abadia pour vos projets musicaux."

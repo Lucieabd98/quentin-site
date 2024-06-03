@@ -20,6 +20,7 @@ function App() {
   return (
     <>
       <Helmet>
+        <title>Quentin Abadia</title>
         <meta
           name="description"
           content="Le site de Quentin Abadia, producteur son et compositeur, vous plonge dans un univers musical unique. Découvrez son portfolio diversifié et explorez ses créations sonores originales, allant de l'identité musicale d'entreprises et de produits au montage audio de projets artistiques. Contactez Quentin pour collaborer sur votre prochain projet musical et donnez vie à vos idées avec sa passion et son expertise."
