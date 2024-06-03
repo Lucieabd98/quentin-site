@@ -19,9 +19,6 @@ const Contact = () => {
       </Helmet>
       <h2>Contact</h2>
       <div className="contact-infos">
-        <div className="left-column">
-          <p>quentin.abadia@gmail.com</p>
-        </div>
         <div className="right-column">
           <form
             name="contact"
@@ -71,6 +68,10 @@ const Contact = () => {
               <FontAwesomeIcon icon="paper-plane" className="paper-plane" />
             </button>
           </form>
+        </div>
+        <div className="left-column">
+          <p>quentin.abadia@gmail.com</p>
+          <p>+33 6 47 73 21 84</p>
         </div>
       </div>
     </div>
