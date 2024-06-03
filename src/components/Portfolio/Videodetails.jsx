@@ -1,10 +1,18 @@
 import "./videodetails.css";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Helmet } from "react-helmet";
 
 const Videodetails = ({ video, onClose }) => {
   return (
     <div className="video-details">
+      <Helmet>
+        <title>Vidéos - Quentin Abadia</title>
+        <meta
+          name="description"
+          content="Regardez une vidéo dont le son a été composé et produit par Quentin Abadia"
+        />
+      </Helmet>
       <div className="close-container">
         <button onClick={onClose} className="close-video-button">
           <FontAwesomeIcon icon="xmark" className="icon-cross" />

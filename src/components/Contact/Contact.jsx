@@ -1,6 +1,7 @@
 import "./contact.css";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Helmet } from "react-helmet";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -9,6 +10,13 @@ const Contact = () => {
 
   return (
     <div className="contact-container">
+      <Helmet>
+        <title>Contact - Quentin Abadia</title>
+        <meta
+          name="description"
+          content="Remplissez vos informations afin d'être contacté par Quentin Abadia pour vos projets musicaux."
+        />
+      </Helmet>
       <h2>Contact</h2>
       <div className="contact-infos">
         <div className="left-column">

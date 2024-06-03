@@ -2,6 +2,7 @@ import "./video.css";
 import data from "../../assets/data/videos.json";
 import Videodetails from "./Videodetails";
 import { useState, useEffect, useRef } from "react";
+import { Helmet } from "react-helmet";
 
 const Video = ({ setSelectedVideo, selectedVideo }) => {
   const openVideoDetails = (video) => {
@@ -14,6 +15,13 @@ const Video = ({ setSelectedVideo, selectedVideo }) => {
 
   return (
     <div className="video-gallery">
+      <Helmet>
+        <title>Vidéos - Quentin Abadia</title>
+        <meta
+          name="description"
+          content="Découvrez les projets musicaux en vidéos de Quentin Abadia dans son portfolio."
+        />
+      </Helmet>
       {selectedVideo ? (
         <div className="video-details-container">
           <Videodetails video={selectedVideo} onClose={closeVideoDetails} />

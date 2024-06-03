@@ -3,6 +3,7 @@ import Separator from "../Elems/Separator/Separator";
 import Video from "./Video";
 import Audio from "./Audio";
 import { useState, useEffect, useRef } from "react";
+import { Helmet } from "react-helmet";
 
 const Portfolio = () => {
   const [selectedButton, setSelectedButton] = useState("Video");
@@ -25,6 +26,13 @@ const Portfolio = () => {
 
   return (
     <div ref={videoDetailsRef}>
+      <Helmet>
+        <title>Portfolio - Quentin Abadia</title>
+        <meta
+          name="description"
+          content="Découvrez les projets musicaux de Quentin Abadia dans son portfolio."
+        />
+      </Helmet>
       <div className="buttons-portfolio">
         <button
           className={selectedButton === "Video" ? "selected" : "not-selected"}
