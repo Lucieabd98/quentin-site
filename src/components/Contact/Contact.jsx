@@ -53,19 +53,21 @@ const Contact = () => {
                 setMail(event.target.value);
               }}
             />
-            <textarea
-              name="message"
-              id="message"
-              required
-              placeholder="Message"
-              value={message}
-              onChange={(event) => {
-                setMessage(event.target.value);
-              }}
-            ></textarea>
-            <button className="submit-form" type="submit">
-              <FontAwesomeIcon icon="paper-plane" className="paper-plane" />
-            </button>
+            <div className="message-icon">
+              <textarea
+                name="message"
+                id="message"
+                required
+                placeholder="Message"
+                value={message}
+                onChange={(event) => {
+                  setMessage(event.target.value);
+                }}
+              ></textarea>
+              <button className="submit-form" type="submit">
+                <FontAwesomeIcon icon="paper-plane" className="paper-plane" />
+              </button>
+            </div>
           </form>
         </div>
         <div className="left-column">

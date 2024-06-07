@@ -23,6 +23,9 @@ form {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.message-icon {
   position: relative;
 }
 
@@ -34,6 +37,7 @@ textarea {
   color: white;
   font-family: "Futura";
   font-size: 15px;
+  width: 100%;
 }
 
 input,
@@ -60,9 +64,8 @@ form textarea {
   cursor: pointer;
   font-size: 20px;
   position: absolute;
-
-  top: 180px;
-  left: 310px;
+  bottom: 10px;
+  right: 0px;
 }
 
 button.submit-form:hover {
@@ -112,8 +115,5 @@ button.submit-form:hover {
   }
   .left-column p {
     font-size: 15px;
-  }
-  .submit-form {
-    top: 169px;
   }
 }
