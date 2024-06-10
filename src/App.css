@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 
-body {
+body,
+button {
   font-family: "Futura";
   background-color: #0a1b2a;
 }

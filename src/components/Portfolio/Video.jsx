@@ -1,8 +1,11 @@
 import "./video.css";
-import data from "../../assets/data/videos.json";
+import corporatedata from "../../assets/data/corporate.json";
+import fictiondata from "../../assets/data/fiction.json";
 import Videodetails from "./Videodetails";
 import { useState, useEffect, useRef } from "react";
 import { Helmet } from "react-helmet";
+import Videocateg from "./Videocateg";
+import ButtonCat from "../Elems/Buttons/ButtonCat";
 
 const Video = ({ setSelectedVideo, selectedVideo }) => {
   const openVideoDetails = (video) => {
@@ -11,6 +14,12 @@ const Video = ({ setSelectedVideo, selectedVideo }) => {
 
   const closeVideoDetails = () => {
     setSelectedVideo(null);
+  };
+
+  const [selectedCat, setSelectedCat] = useState("Corporate");
+
+  const handleClick = (title) => {
+    setSelectedCat(title);
   };
 
   return (
@@ -26,22 +35,22 @@ const Video = ({ setSelectedVideo, selectedVideo }) => {
           <Videodetails video={selectedVideo} onClose={closeVideoDetails} />
         </div>
       ) : (
-        data.map((video) => (
-          <div
-            className="video-item"
-            key={video.miniature}
-            onClick={() => openVideoDetails(video)}
-          >
-            <img
-              className="miniature-pics"
-              src={video.miniature}
-              alt={video.titre}
-            />
-            <div className="overlay">
-              <div className="text">{video.titre}</div>
-            </div>
-          </div>
-        ))
+        <>
+          <ButtonCat
+            title={"Corporate"}
+            handleClick={handleClick}
+            selectedCat={selectedCat}
+          />
+          <ButtonCat
+            title={"Fiction"}
+            handleClick={handleClick}
+            selectedCat={selectedCat}
+          />
+          <Videocateg
+            data={selectedCat === "Corporate" ? corporatedata : fictiondata}
+            openVideoDetails={openVideoDetails}
+          />
+        </>
       )}
     </div>
   );

@@ -1,23 +1,37 @@
 import "./audio.css";
-
-import data from "../../assets/data/audios.json";
+import ButtonCat from "../Elems/Buttons/ButtonCat";
+import Audiocateg from "./Audiocateg";
+import podcastdata from "../../assets/data/podcast.json";
+import musicdata from "../../assets/data/music.json";
+import { useState } from "react";
 
 const Audio = () => {
+  const [selectedCat, setSelectedCat] = useState("Podcast");
+
+  const handleClick = (title) => {
+    setSelectedCat(title);
+  };
+
   return (
     <div className="audio-gallery">
-      {data.map((audio) => (
-        <div key={audio.titre} className="audio-details">
-          <iframe
-            className="podcast"
-            height="235"
-            scrolling="no"
-            frameBorder="no"
-            allow="autoplay; encrypted-media"
-            src={audio.link}
-          ></iframe>
-          <h3>{audio.titre}</h3>
+      <>
+        <div className="button-audio-gallery">
+          <ButtonCat
+            title={"Podcast"}
+            handleClick={handleClick}
+            selectedCat={selectedCat}
+          />
+          <ButtonCat
+            title={"Musique"}
+            handleClick={handleClick}
+            selectedCat={selectedCat}
+          />
         </div>
-      ))}
+
+        <Audiocateg
+          data={selectedCat === "Podcast" ? podcastdata : musicdata}
+        />
+      </>
     </div>
   );
 };

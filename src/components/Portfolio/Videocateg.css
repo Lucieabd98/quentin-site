@@ -1,0 +1,50 @@
+.video-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-details-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-item {
+  position: relative;
+  flex: 0 1 calc(50% - 3px); /* Deux éléments par ligne */
+}
+
+.miniature-pics {
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-item:hover .overlay {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.text {
+  color: white;
+  font-size: 16px;
+  text-align: center;
+}
