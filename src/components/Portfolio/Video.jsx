@@ -36,16 +36,19 @@ const Video = ({ setSelectedVideo, selectedVideo }) => {
         </div>
       ) : (
         <>
-          <ButtonCat
-            title={"Corporate"}
-            handleClick={handleClick}
-            selectedCat={selectedCat}
-          />
-          <ButtonCat
-            title={"Fiction"}
-            handleClick={handleClick}
-            selectedCat={selectedCat}
-          />
+          <div className="button-video-gallery">
+            <ButtonCat
+              title={"Corporate"}
+              handleClick={handleClick}
+              selectedCat={selectedCat}
+            />
+            <ButtonCat
+              title={"Fiction"}
+              handleClick={handleClick}
+              selectedCat={selectedCat}
+            />
+          </div>
+
           <Videocateg
             data={selectedCat === "Corporate" ? corporatedata : fictiondata}
             openVideoDetails={openVideoDetails}

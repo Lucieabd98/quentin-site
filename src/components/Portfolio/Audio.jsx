@@ -13,25 +13,20 @@ const Audio = () => {
   };
 
   return (
-    <div className="audio-gallery">
-      <>
-        <div className="button-audio-gallery">
-          <ButtonCat
-            title={"Podcast"}
-            handleClick={handleClick}
-            selectedCat={selectedCat}
-          />
-          <ButtonCat
-            title={"Musique"}
-            handleClick={handleClick}
-            selectedCat={selectedCat}
-          />
-        </div>
-
-        <Audiocateg
-          data={selectedCat === "Podcast" ? podcastdata : musicdata}
+    <div>
+      <div className="button-audio-gallery">
+        <ButtonCat
+          title={"Podcast"}
+          handleClick={handleClick}
+          selectedCat={selectedCat}
         />
-      </>
+        <ButtonCat
+          title={"Musique"}
+          handleClick={handleClick}
+          selectedCat={selectedCat}
+        />
+      </div>
+      <Audiocateg data={selectedCat === "Podcast" ? podcastdata : musicdata} />
     </div>
   );
 };

@@ -1,12 +1,4 @@
-.container-cat {
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-}
-
-.container-cat button {
+button {
   background-color: transparent;
   color: white;
   border: none;
@@ -14,10 +6,7 @@
   font-size: 20px;
 }
 
-.container-cat button:hover {
-  background-color: transparent;
-}
-
 .selectedCat {
   text-decoration: underline;
+  text-underline-offset: 3px;
 }

@@ -13,7 +13,7 @@ const Audiocateg = ({ data }) => {
             allow="autoplay; encrypted-media"
             src={audio.link}
           ></iframe>
-          <h3>{audio.titre}</h3>
+          <h3 className="text">{audio.titre}</h3>
         </div>
       ))}
     </div>

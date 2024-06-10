@@ -38,6 +38,13 @@
   align-items: center;
 }
 
+.portfolio-content button:hover {
+  background-color: transparent;
+  text-decoration: underline;
+
+  text-underline-offset: 3px;
+}
+
 @media (max-width: 480px) {
   .buttons-portfolio .not-selected,
   .buttons-portfolio .selected {
@@ -46,4 +53,7 @@
 }
 
 @media (max-width: 360px) {
+  .portfolio-content h3 {
+    font-size: 30px;
+  }
 }

@@ -14,7 +14,7 @@
 
 .video-item {
   position: relative;
-  flex: 0 1 calc(50% - 3px); /* Deux éléments par ligne */
+  flex: 0 1 calc(50% - 3px);
 }
 
 .miniature-pics {
