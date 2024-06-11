@@ -117,4 +117,7 @@ button.submit-form:hover {
   .right-column {
     font-size: 19px;
   }
+  .submit-form {
+    right: 5px;
+  }
 }
