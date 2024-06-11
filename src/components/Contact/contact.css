@@ -118,6 +118,6 @@ button.submit-form:hover {
     font-size: 19px;
   }
   .submit-form {
-    right: 5px;
+    right: 0px;
   }
 }
