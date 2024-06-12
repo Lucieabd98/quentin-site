@@ -2,7 +2,7 @@ import "./video.css";
 import corporatedata from "../../assets/data/corporate.json";
 import fictiondata from "../../assets/data/fiction.json";
 import Videodetails from "./Videodetails";
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import { Helmet } from "react-helmet";
 import Videocateg from "./Videocateg";
 import ButtonCat from "../Elems/Buttons/ButtonCat";

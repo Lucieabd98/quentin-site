@@ -48,6 +48,10 @@
   color: white;
 }
 
+.video-details h2 {
+  text-align: center;
+}
+
 @media (max-width: 768px) {
   .video-details {
     width: 550px;
@@ -56,21 +60,24 @@
 
 @media (max-width: 480px) {
   .video-details {
-    width: 90%;
-    padding: 10px 10px 50px 10px;
+    width: 100%;
+    padding: 33px 2px 50px 2px;
   }
   .video-details-description {
     margin-top: 0px;
     width: 90%;
   }
   .video-details-description p {
-    font-size: 15px;
+    font-size: 19px;
   }
   .icon-cross {
     font-size: 25px;
   }
   iframe {
     height: 200px;
+  }
+  .video-details h2 {
+    font-size: 22px;
   }
 }
 
