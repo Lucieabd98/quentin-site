@@ -70,7 +70,7 @@ const Contact = () => {
             </div>
           </form>
         </div>
-        <div className="left-column">
+        <div className="contact-left-column">
           <p>quentin.abadia@gmail.com</p>
           <p>+33 6 47 73 21 84</p>
         </div>
