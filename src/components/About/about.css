@@ -1,21 +1,39 @@
-.about-container {
+.definitions-texts {
   display: flex;
-  flex-direction: column;
-  padding-left: 2px;
-  gap: 60px;
+  height: 50vh;
+  gap: 24px;
+  margin-top: 10vh;
+  justify-content: center;
+  padding-left: 10vw;
+  padding-right: 10vw;
 }
 
-.about-text {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  font-weight: 400;
-  padding-bottom: 30px;
+.definitions-texts p {
+  line-height: 25px;
+  font-size: 18px;
+  font-weight: 200;
+  width: 50%;
 }
 
-@media (max-width: 480px) {
-  .about-text p {
-    font-size: 20px;
-    font-weight: 400;
+.definitions-texts span {
+  font-weight: 500;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .definitions-texts {
+    flex-wrap: wrap;
+    margin-top: 2vh;
+    justify-content: space-evenly;
+    overflow-y: scroll;
+    padding: 15px;
+    gap: 5vh;
+  }
+
+  .definitions-texts p {
+    line-height: 22px;
+    font-size: 15px;
+    font-weight: 200;
+    width: 40%;
   }
 }

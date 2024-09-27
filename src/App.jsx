@@ -1,15 +1,14 @@
 import "./App.css";
 import Container from "@mui/material/Container";
-import { Element } from "react-scroll";
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from "react-helmet-async"; // Remplace `react-helmet` par `react-helmet-async`
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-// Impport des composants
-
-import Header from "./components/Header/Header";
-import Definitions from "./components/Definitions/Definitions";
+// Import des composants
+import Navigation from "./components/Navigation/Navigation";
 import Portfolio from "./components/Portfolio/Portfolio";
-import About from "./components/About/About";
+import Definitions from "./components/About/About";
 import Contact from "./components/Contact/Contact";
+import Home from "./components/Home/Home";
 
 // Import des icônes
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -18,17 +17,18 @@ library.add(faXmark, faPaperPlane);
 
 function App() {
   return (
-    <>
+    <HelmetProvider>
+      {/* Enveloppe l'application avec HelmetProvider */}
       <Helmet>
         <title>Quentin Abadia</title>
         <meta
           name="description"
-          content="Le site de Quentin Abadia, producteur son et compositeur, vous plonge dans un univers musical unique. Découvrez son portfolio diversifié et explorez ses créations sonores originales, allant de l'identité musicale d'entreprises et de produits au montage audio de projets artistiques. Contactez Quentin pour collaborer sur votre prochain projet musical et donnez vie à vos idées avec sa passion et son expertise."
+          content="composition musicale · production sonore · sound design"
         />
         <meta property="og:title" content="Quentin Abadia - Producteur son" />
         <meta
           property="og:description"
-          content="Le site de Quentin Abadia, producteur son et compositeur, vous plonge dans un univers musical unique. Découvrez son portfolio diversifié et explorez ses créations sonores originales, allant de l'identité musicale d'entreprises et de produits au montage audio de projets artistiques. Contactez Quentin pour collaborer sur votre prochain projet musical et donnez vie à vos idées avec sa passion et son expertise."
+          content="composition musicale · production sonore · sound design"
         />
         <meta property="og:url" content="https://quentin-abadia.netlify.app/" />
         <meta property="og:type" content="website" />
@@ -40,27 +40,23 @@ function App() {
         <meta name="twitter:title" content="Quentin Abadia - Producteur son" />
         <meta
           name="twitter:description"
-          content="Le site de Quentin Abadia, producteur son et compositeur, vous plonge dans un univers musical unique. Découvrez son portfolio diversifié et explorez ses créations sonores originales, allant de l'identité musicale d'entreprises et de produits au montage audio de projets artistiques. Contactez Quentin pour collaborer sur votre prochain projet musical et donnez vie à vos idées avec sa passion et son expertise."
+          content="composition musicale · production sonore · sound design"
         />
         <meta
           name="twitter:image"
           content="https://quentin-abadia.netlify.app/imgs/first-sight-site.png"
         />
       </Helmet>
-      <Header />
-      <Container>
-        <Definitions />
-        <Element name="portfolio">
-          <Portfolio />
-        </Element>
-        <Element name="about">
-          <About />
-        </Element>
-        <Element name="contact">
-          <Contact />
-        </Element>
-      </Container>
-    </>
+      <Router>
+        <Navigation />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/about" element={<Definitions />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </Router>
+    </HelmetProvider>
   );
 }
 

@@ -4,8 +4,6 @@
   align-items: center;
   justify-content: center;
   gap: 40px;
-  background-color: #0c2a40;
-  padding: 20px 20px 60px 20px;
   border-radius: 15px;
   width: 850px;
 }
@@ -45,7 +43,7 @@
 
 .icon-cross {
   font-size: 30px;
-  color: white;
+  color: black;
 }
 
 .video-details h2 {
@@ -61,14 +59,14 @@
 @media (max-width: 480px) {
   .video-details {
     width: 100%;
-    padding: 33px 2px 50px 2px;
   }
   .video-details-description {
     margin-top: 0px;
     width: 90%;
   }
   .video-details-description p {
-    font-size: 19px;
+    font-size: 15px;
+    font-weight: 200;
   }
   .icon-cross {
     font-size: 25px;

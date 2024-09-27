@@ -2,14 +2,14 @@ import "./buttonCat.css";
 
 const ButtonCat = ({ title, handleClick, selectedCat }) => {
   return (
-    <button
+    <h2
       className={selectedCat === title ? "selectedCat" : "not-selected"}
       onClick={() => {
         handleClick(title);
       }}
     >
       {title}
-    </button>
+    </h2>
   );
 };
 

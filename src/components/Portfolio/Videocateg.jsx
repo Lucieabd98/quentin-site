@@ -1,13 +1,16 @@
 import "./Videocateg.css";
 
-const Videocateg = ({ openVideoDetails, data }) => {
+const Videocateg = ({ openVideoDetails, data, setHidden }) => {
   return (
     <div className="video-gallery">
       {data.map((item) => (
         <div
           className="video-item"
           key={item.miniature}
-          onClick={() => openVideoDetails(item)}
+          onClick={() => {
+            openVideoDetails(item);
+            setHidden(true);
+          }}
         >
           <img
             className="miniature-pics"
@@ -15,7 +18,7 @@ const Videocateg = ({ openVideoDetails, data }) => {
             alt={item.titre}
           />
           <div className="overlay">
-            <div className="text">{item.titre}</div>
+            <div className="text-overlay">{item.titre}</div>
           </div>
         </div>
       ))}

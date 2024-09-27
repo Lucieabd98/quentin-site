@@ -1,13 +1,36 @@
-.buttons-portfolio .not-selected {
-  color: white;
+.portfolio-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 7vh;
+}
+
+.wave {
+  width: 102vw;
+  z-index: 0;
+}
+
+.audio {
+  position: absolute;
+  font-size: 18px;
+  z-index: 3;
+  font-weight: 200;
   background-color: transparent;
+  top: 34.6%;
+  left: 51.1%;
+  /* transform: translate(-60%, -52%); */
   border: none;
-  padding: 20px 80px;
-  border-radius: 15px;
-  font-size: 20px;
-  font-weight: bold;
-  cursor: pointer;
-  margin-bottom: 10px;
+}
+
+.video {
+  font-size: 18px;
+  border: none;
+  position: absolute;
+  background-color: transparent;
+  z-index: 3;
+  top: 34.6%;
+  right: 51.1%;
+  /* transform: translate(-45%, -51.6%); */
+  left: auto;
 }
 
 .buttons-portfolio {
@@ -17,22 +40,10 @@
 }
 
 .buttons-portfolio .selected {
-  background-color: #0c2a40;
-  border: none;
-  padding: 20px 80px;
-  border-radius: 15px;
-  font-size: 20px;
-  font-weight: bold;
-  cursor: pointer;
-  margin-bottom: 10px;
-}
-
-.buttons-portfolio button:hover {
-  background-color: #0c2a40;
+  font-weight: 500;
 }
 
 .portfolio-content {
-  margin-top: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,14 +52,32 @@
 .portfolio-content button:hover {
   background-color: transparent;
   text-decoration: underline;
-
   text-underline-offset: 3px;
 }
 
-@media (max-width: 480px) {
-  .buttons-portfolio .not-selected,
-  .buttons-portfolio .selected {
-    padding: 20px 50px;
+@media (max-width: 768px) {
+  .portfolio-container {
+    height: 13vh;
+    margin-bottom: 2vh;
+  }
+
+  .portfolio-container > img {
+    position: absolute;
+    width: 100%;
+    height: 12vh;
+    object-fit: cover;
+  }
+
+  .audio {
+    font-size: 16px;
+    top: 26.6%;
+    left: 50.2%;
+  }
+
+  .video {
+    top: 26%;
+    right: 56.8%;
+    font-size: 16px;
   }
 }
 

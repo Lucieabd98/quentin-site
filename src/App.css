@@ -4,17 +4,26 @@
   box-sizing: border-box;
 }
 
+a,
+ul,
+li {
+  color: black;
+}
+
 body,
 button {
   font-family: "Futura";
-  background-color: #0a1b2a;
+  background-color: #ffff;
+  color: black;
 }
 
 h2 {
   font-weight: bold;
   font-size: 18px;
+  color: black;
 }
 
 p {
   font-size: 18px;
+  color: black;
 }

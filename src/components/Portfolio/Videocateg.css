@@ -14,7 +14,7 @@
 
 .video-item {
   position: relative;
-  flex: 0 1 calc(50% - 3px);
+  flex: 0 1 calc(40% - 3px);
 }
 
 .miniature-pics {
@@ -43,8 +43,14 @@
   cursor: pointer;
 }
 
-.text {
+.text-overlay {
   color: white;
   font-size: 16px;
   text-align: center;
+}
+
+@media (max-width: 480px) {
+  .video-item {
+    flex: 0 1 calc(50% - 3px);
+  }
 }
