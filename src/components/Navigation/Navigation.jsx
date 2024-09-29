@@ -1,12 +1,14 @@
 import "./Navigation.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import header from "../../assets/imgs/logo-header.png";
 
 const Navigation = () => {
   return (
     <header className="header-container">
       <div className="header">
-        <img src={header} alt="quentin abadia logo" />
+        <Link to="/" className="header-logo">
+          <img src={header} alt="quentin abadia logo" />
+        </Link>
       </div>
       <div className="sub-header">
         <div className="header-titles">

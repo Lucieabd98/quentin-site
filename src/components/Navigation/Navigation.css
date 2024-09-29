@@ -11,19 +11,30 @@
   margin-bottom: 7vh;
 }
 
+.header-logo {
+  display: block; /* Assure-toi que le lien prend bien toute la largeur de l'image */
+  width: 100%;
+}
+
+.header-logo img {
+  width: 100%; /* S'assure que l'image remplit la largeur du lien */
+  height: auto;
+  display: block;
+}
+
 .header {
   position: relative;
   width: 100%;
   height: 200px;
   overflow: hidden;
 }
-
+/* 
 .header > img {
   width: 100%;
   height: auto;
   display: block;
   object-fit: cover;
-}
+} */
 
 .sub-header {
   position: relative;
@@ -96,7 +107,7 @@
     height: 140px;
   }
 
-  .header > img {
+  .header-logo > img {
     position: absolute;
     top: 0;
     left: 0;
