@@ -18,7 +18,6 @@ library.add(faXmark, faPaperPlane);
 function App() {
   return (
     <HelmetProvider>
-      {/* Enveloppe l'application avec HelmetProvider */}
       <Helmet>
         <title>Quentin Abadia</title>
         <meta
