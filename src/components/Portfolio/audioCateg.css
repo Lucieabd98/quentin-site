@@ -21,17 +21,17 @@
 }
 
 @media (max-width: 768px) {
-}
-.audio-gallery {
-  padding: 20px;
-  width: 100%;
-}
-.audio-details {
-  gap: 10px;
-}
-.podcast {
-  width: 230px;
-  height: 152px;
+  .audio-gallery {
+    padding: 20px;
+    width: 100%;
+  }
+  .audio-details {
+    gap: 10px;
+  }
+  .podcast {
+    width: 230px;
+    height: 152px;
+  }
 }
 
 @media (max-width: 480px) {
