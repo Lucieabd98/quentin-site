@@ -10,23 +10,28 @@
   display: flex;
   align-items: center;
   width: 100%;
+  gap: 40px;
 }
 
 .text {
-  color: black;
+  color: #5e5e5f;
   font-size: 16px;
   text-align: center;
   margin: 0 7%;
 }
 
 @media (max-width: 768px) {
-  .podcast {
-    width: 230px;
-    height: 240px;
-  }
-  .audio-gallery {
-    width: 550px;
-  }
+}
+.audio-gallery {
+  padding: 20px;
+  width: 100%;
+}
+.audio-details {
+  gap: 10px;
+}
+.podcast {
+  width: 230px;
+  height: 152px;
 }
 
 @media (max-width: 480px) {

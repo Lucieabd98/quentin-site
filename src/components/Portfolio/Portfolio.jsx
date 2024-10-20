@@ -29,7 +29,7 @@ const Portfolio = () => {
         />
       </Helmet>
       <div className="portfolio-container">
-        <img src={portee} alt="" className="wave" />
+        <hr />
         <div className="button-div">
           <button
             className={`video ${selectedButton === "Video" ? "selected" : ""}`}
@@ -58,9 +58,7 @@ const Portfolio = () => {
             />
           </Container>
         ) : (
-          <Container>
-            <Audio />
-          </Container>
+          <Audio />
         )}
       </div>
       <Separator />

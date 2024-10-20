@@ -1,9 +1,9 @@
 .definitions-texts {
   display: flex;
-  height: 50vh;
+  flex-wrap: nowrap;
   gap: 24px;
   margin-top: 10vh;
-  justify-content: center;
+  justify-content: space-between;
   padding-left: 10vw;
   padding-right: 10vw;
 }
@@ -12,7 +12,8 @@
   line-height: 25px;
   font-size: 18px;
   font-weight: 200;
-  width: 50%;
+  width: 45%;
+  min-width: 300px;
 }
 
 .definitions-texts span {
@@ -22,18 +23,18 @@
 
 @media (max-width: 768px) {
   .definitions-texts {
+    margin-top: 5vh;
     flex-wrap: wrap;
-    margin-top: 2vh;
-    justify-content: space-evenly;
-    overflow-y: scroll;
     padding: 15px;
-    gap: 5vh;
+    gap: 25px;
+    justify-content: center;
+    overflow-y: auto;
   }
 
   .definitions-texts p {
-    line-height: 22px;
-    font-size: 15px;
-    font-weight: 200;
-    width: 40%;
+    font-size: 16px;
+    line-height: 24px;
+    width: 45%;
+    min-width: 45%;
   }
 }

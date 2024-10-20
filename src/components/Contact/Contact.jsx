@@ -2,8 +2,8 @@ import "./contact.css";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Helmet } from "react-helmet";
-import { Container } from "@mui/material";
 import separator from "../../assets/imgs/logo-separator.png";
+import quentinImg from "../../assets/imgs/quentin-face.png";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -75,10 +75,15 @@ const Contact = () => {
             </form>
           </div>
           <div className="contact-left-column">
-            <p>Quentin Abadia</p>
-            <p>Paris</p>
-            <p>quentin.abadia@gmail.com</p>
-            <p>+33 6 47 73 21 84</p>
+            <div>
+              <img src={quentinImg} alt="quentin's face" />
+            </div>
+            <div>
+              <p>Quentin Abadia</p>
+              <p>Paris</p>
+              <p>quentin.abadia@gmail.com</p>
+              <p>+33 6 47 73 21 84</p>
+            </div>
           </div>
         </div>
       </div>
