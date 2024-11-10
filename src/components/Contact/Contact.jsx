@@ -12,7 +12,7 @@ const Contact = () => {
 
   return (
     <div className="contact">
-      <img src={separator} alt="" />
+      <hr />
       <div className="contact-container">
         <Helmet>
           <meta

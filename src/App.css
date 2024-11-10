@@ -27,3 +27,7 @@ p {
   font-size: 18px;
   color: black;
 }
+
+body {
+  height: 100vh;
+}

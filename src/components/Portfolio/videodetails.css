@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 40px;
+  gap: 30px;
   border-radius: 15px;
   width: 850px;
 }
@@ -34,7 +34,7 @@
 .video-details-description p {
   text-align: center;
   line-height: 20px;
-  font-weight: 400;
+  font-weight: 200;
 }
 
 .video-details a {
@@ -48,6 +48,7 @@
 
 .video-details h2 {
   text-align: center;
+  font-size: 20px;
 }
 
 @media (max-width: 768px) {
@@ -75,7 +76,7 @@
     height: 200px;
   }
   .video-details h2 {
-    font-size: 22px;
+    font-size: 19px;
   }
 }
 

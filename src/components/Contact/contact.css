@@ -1,13 +1,19 @@
-.contact img {
-  width: 100%;
-}
-
 .contact-container {
   display: flex;
   flex-direction: column;
-  margin-top: 2vh;
-  padding-bottom: 4vh;
-  height: 100%;
+  margin-top: 5vh;
+  flex: 1;
+}
+
+hr {
+  margin-bottom: 4vh;
+  border: none;
+  height: 1px;
+  background-color: #5e5e5f;
+}
+
+.contact img {
+  width: 100%;
 }
 
 .contact-infos {
@@ -18,7 +24,7 @@
 }
 
 .contact-infos img {
-  width: 90%;
+  width: 80%;
   margin-bottom: 2vh;
 }
 
