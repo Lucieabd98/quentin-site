@@ -11,17 +11,22 @@ const Audiocateg = ({ data }) => {
           if (entry.isIntersecting) {
             const iframe = entry.target.querySelector("iframe");
             if (iframe && iframe.dataset.src) {
+              console.log("Intersection observée pour:", iframe); // Vérification
               iframe.src = iframe.dataset.src;
               iframe.removeAttribute("data-src");
-              iframe.classList.add("fade-in");
+
+              // Supprimer la classe initiale et ajouter la classe de fondu
+              iframe.classList.remove("audio-fade-start");
+              iframe.classList.add("audio-fade-in");
+              console.log("Classe audio-fade-in appliquée :", iframe); // Vérification
             }
-            observer.unobserve(entry.target);
+            observer.unobserve(entry.target); // Arrêter d’observer cet élément
           }
         });
       },
       {
-        rootMargin: "0px 0px 30px 0px",
-        threshold: 0.2,
+        rootMargin: "0px 0px 20px 0px",
+        threshold: 0.3,
       }
     );
 
@@ -41,7 +46,7 @@ const Audiocateg = ({ data }) => {
           ref={(el) => (audioRef.current[index] = el)}
         >
           <iframe
-            className="podcast"
+            className="podcast audio-fade-start"
             data-src={audio.link}
             height="235"
             scrolling="no"
