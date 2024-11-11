@@ -11,16 +11,12 @@ const Audiocateg = ({ data }) => {
           if (entry.isIntersecting) {
             const iframe = entry.target.querySelector("iframe");
             if (iframe && iframe.dataset.src) {
-              console.log("Intersection observée pour:", iframe); // Vérification
               iframe.src = iframe.dataset.src;
               iframe.removeAttribute("data-src");
-
-              // Supprimer la classe initiale et ajouter la classe de fondu
               iframe.classList.remove("audio-fade-start");
               iframe.classList.add("audio-fade-in");
-              console.log("Classe audio-fade-in appliquée :", iframe); // Vérification
             }
-            observer.unobserve(entry.target); // Arrêter d’observer cet élément
+            observer.unobserve(entry.target);
           }
         });
       },
@@ -53,7 +49,13 @@ const Audiocateg = ({ data }) => {
             frameBorder="no"
             allow="autoplay; encrypted-media"
           ></iframe>
-          <h3 className="text">{audio.titre}</h3>
+          <div className="text-audio">
+            <h3 className="text">{audio.titre}</h3>
+            <p
+              className="description-audio"
+              dangerouslySetInnerHTML={{ __html: audio?.description }}
+            ></p>
+          </div>
         </div>
       ))}
     </div>
