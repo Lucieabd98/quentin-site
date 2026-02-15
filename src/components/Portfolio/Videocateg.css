@@ -83,7 +83,7 @@
     gap: 5px;
   }
   .video-item {
-    width: calc(50% - 5px);
+    width: 100%;
   }
   .text-overlay {
     font-size: 0.9rem;
