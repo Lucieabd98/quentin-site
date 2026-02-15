@@ -21,17 +21,9 @@ const Video = ({ setSelectedVideo, selectedVideo }) => {
           content="Découvrez les projets musicaux en vidéos de Quentin Abadia dans son portfolio."
         />
       </Helmet>
-      {selectedVideo ? (
-        <div className="video-details-container">
-          <Videodetails video={selectedVideo} onClose={closeVideoDetails} />
-        </div>
-      ) : (
-        <>
-          <Videocateg
-            data={corporatedata}
-            openVideoDetails={openVideoDetails}
-          />
-        </>
+      <Videocateg data={corporatedata} openVideoDetails={openVideoDetails} />
+      {selectedVideo && (
+        <Videodetails video={selectedVideo} onClose={closeVideoDetails} />
       )}
     </div>
   );

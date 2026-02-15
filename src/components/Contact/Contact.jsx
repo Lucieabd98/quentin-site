@@ -2,7 +2,6 @@ import "./contact.css";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Helmet } from "react-helmet";
-import separator from "../../assets/imgs/logo-separator.png";
 import quentinImg from "../../assets/imgs/quentin-face.png";
 
 const Contact = () => {
@@ -40,7 +39,7 @@ const Contact = () => {
                 name="name"
                 id="name"
                 required
-                placeholder="Nom"
+                placeholder="Nom*"
                 value={name}
                 onChange={(event) => {
                   setName(event.target.value);
@@ -51,7 +50,7 @@ const Contact = () => {
                 name="mail"
                 id="mail"
                 required
-                placeholder="Mail"
+                placeholder="Mail*"
                 value={mail}
                 onChange={(event) => {
                   setMail(event.target.value);
@@ -62,7 +61,7 @@ const Contact = () => {
                   name="message"
                   id="message"
                   required
-                  placeholder="Message"
+                  placeholder="Message*"
                   value={message}
                   onChange={(event) => {
                     setMessage(event.target.value);
@@ -78,7 +77,7 @@ const Contact = () => {
             <div>
               <img src={quentinImg} alt="quentin's face" />
             </div>
-            <div>
+            <div className="infos">
               <p>Quentin Abadia</p>
               <p>Paris</p>
               <p>quentin.abadia@gmail.com</p>

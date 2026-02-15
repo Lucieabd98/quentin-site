@@ -47,13 +47,15 @@ function App() {
         />
       </Helmet>
       <Router>
-        <Navigation />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/about" element={<Definitions />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+        <div className="app-layout">
+          <Navigation />
+          <main className="page-content">
+            <Routes>
+              <Route path="/" element={<Portfolio />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </main>
+        </div>
       </Router>
     </HelmetProvider>
   );

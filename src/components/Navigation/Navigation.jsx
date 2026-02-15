@@ -5,29 +5,21 @@ import header from "../../assets/imgs/logo-header.png";
 const Navigation = () => {
   return (
     <header className="header-container">
-      <div className="header">
-        <Link to="/" className="header-logo">
-          <img src={header} alt="quentin abadia logo" />
-        </Link>
-      </div>
+      <Link to="/" className="header-logo">
+        <img src={header} alt="quentin abadia logo" />
+      </Link>
+
       <div className="sub-header">
         <div className="header-titles">
-          <h1>composition musicale ·&nbsp;</h1>
-          <h1> production sonore ·&nbsp; </h1>
-          <h1> sound design</h1>
+          <h1>composition musicale · </h1>
+          <h1>production sonore · </h1>
+          <h1>sound design</h1>
         </div>
+
         <nav className="navigation">
           <ul>
             <li>
-              <NavLink to="/" end>
-                Accueil
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/about">À propos</NavLink>
-            </li>
-            <li>
-              <NavLink to="/portfolio">Portfolio</NavLink>
+              <NavLink to="/">Accueil</NavLink>
             </li>
             <li>
               <NavLink to="/contact">Contact</NavLink>

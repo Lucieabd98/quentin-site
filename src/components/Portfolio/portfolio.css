@@ -8,9 +8,7 @@ button:hover {
 }
 
 .portfolio-container button {
-  margin-top: 2vh;
-  padding: 5px 28px;
-  font-size: 20px;
+  font-size: 23px;
   font-weight: 200;
   border: 1px solid transparent;
   color: #5e5e5f;
@@ -23,9 +21,10 @@ button:hover {
 
 .button-div {
   display: flex;
+  margin-top: 3.5vh;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 3vw;
 }
 
 .audio {
@@ -46,6 +45,7 @@ button:hover {
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin-bottom: 5vh;
 }
 
 hr {
@@ -55,9 +55,8 @@ hr {
 }
 
 @media (max-width: 768px) {
-  .wave {
-    height: 45px;
-    object-fit: cover;
+  .button-div {
+    margin-top: 1vh;
   }
 
   .portfolio-container {
@@ -65,9 +64,7 @@ hr {
   }
 
   .portfolio-container button {
-    margin-top: 1vh;
     font-size: 16px;
-    padding: 3px 25px;
   }
 
   @media (max-width: 360px) {

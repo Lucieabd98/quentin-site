@@ -9,17 +9,48 @@
   position: relative;
   width: calc(50% - 10px);
   overflow: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.video-item.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .miniature-pics {
   width: 100%;
   height: 100%;
   opacity: 0;
-  transition: opacity 1s ease-in;
+  filter: blur(10px);
+  transition: opacity 1s ease-in, filter 0.5s ease-out;
+  display: block;
 }
 
-.miniature-pics.fade-in {
+.miniature-pics.loaded {
   opacity: 1;
+  filter: blur(0);
+}
+
+.skeleton {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #ddd 25%, #eee 50%, #ddd 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
 }
 
 .overlay {

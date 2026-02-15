@@ -7,22 +7,32 @@ const Audiocateg = ({ data }) => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
+        entries.forEach((entry, index) => {
           if (entry.isIntersecting) {
             const iframe = entry.target.querySelector("iframe");
+            const skeleton = entry.target.querySelector(".audio-skeleton");
+
             if (iframe && iframe.dataset.src) {
               iframe.src = iframe.dataset.src;
+              iframe.onload = () => {
+                iframe.classList.add("audio-loaded");
+                if (skeleton) skeleton.style.display = "none";
+              };
               iframe.removeAttribute("data-src");
-              iframe.classList.remove("audio-fade-start");
-              iframe.classList.add("audio-fade-in");
             }
+
+            // animation en cascade
+            setTimeout(() => {
+              entry.target.classList.add("visible");
+            }, index * 100);
+
             observer.unobserve(entry.target);
           }
         });
       },
       {
-        rootMargin: "0px 0px 20px 0px",
-        threshold: 0.3,
+        rootMargin: "200px 0px",
+        threshold: 0.1,
       }
     );
 
@@ -41,14 +51,16 @@ const Audiocateg = ({ data }) => {
           className="audio-details"
           ref={(el) => (audioRef.current[index] = el)}
         >
-          <iframe
-            className="podcast audio-fade-start"
-            data-src={audio.link}
-            height="235"
-            scrolling="no"
-            frameBorder="no"
-            allow="autoplay; encrypted-media"
-          ></iframe>
+          <div className="audio-frame-wrapper">
+            <div className="audio-skeleton"></div>
+            <iframe
+              className="podcast audio-fade-start"
+              data-src={audio.link}
+              scrolling="no"
+              frameBorder="no"
+              allow="autoplay; encrypted-media"
+            ></iframe>
+          </div>
           <div className="text-audio">
             <h3 className="text">{audio.titre}</h3>
             <p

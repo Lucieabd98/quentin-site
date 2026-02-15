@@ -1,20 +1,14 @@
 import "./portfolio.css";
-import Separator from "../Elems/Separator/Separator";
 import Video from "./Video";
 import Audio from "./Audio";
-import { useState, useEffect, useRef } from "react";
+import Contact from "../Contact/Contact";
+import { useState } from "react";
 import { Helmet } from "react-helmet";
-import portee from "../../assets/imgs/logo-separator.png";
 import { Container } from "@mui/material";
 
 const Portfolio = () => {
   const [selectedButton, setSelectedButton] = useState("Video");
   const [selectedVideo, setSelectedVideo] = useState(null);
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
 
   const handleClick = (title) => {
     setSelectedButton(title);
@@ -61,7 +55,7 @@ const Portfolio = () => {
           <Audio />
         )}
       </div>
-      <Separator />
+      <Contact />
     </div>
   );
 };

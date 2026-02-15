@@ -7,21 +7,31 @@ const Videocateg = ({ openVideoDetails, data, setHidden }) => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
+        entries.forEach((entry, index) => {
           if (entry.isIntersecting) {
             const img = entry.target.querySelector("img");
             if (img && img.dataset.src) {
               img.src = img.dataset.src;
+              img.onload = () => {
+                img.classList.add("loaded");
+                const skeleton = entry.target.querySelector(".skeleton");
+                if (skeleton) skeleton.style.display = "none";
+              };
               img.removeAttribute("data-src");
-              img.classList.add("fade-in");
             }
+
+            // Animation en cascade
+            setTimeout(() => {
+              entry.target.classList.add("visible");
+            }, index * 100);
+
             observer.unobserve(entry.target);
           }
         });
       },
       {
-        rootMargin: "0px 0px 50px 0px",
-        threshold: 0.9,
+        rootMargin: "200px 0px", // précharge avant d'être visible
+        threshold: 0.1,
       }
     );
 
@@ -44,6 +54,7 @@ const Videocateg = ({ openVideoDetails, data, setHidden }) => {
           }}
           ref={(el) => (videoRef.current[index] = el)}
         >
+          <div className="skeleton"></div>
           <img
             className="miniature-pics"
             data-src={item.miniature}
