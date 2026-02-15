@@ -80,8 +80,10 @@ const Contact = () => {
             <div className="infos">
               <p>Quentin Abadia</p>
               <p>Paris</p>
-              <p>quentin.abadia@gmail.com</p>
-              <p>+33 6 47 73 21 84</p>
+              <a href="mailto:quentin.abadia@gmail.com">
+                quentin.abadia@gmail.com
+              </a>
+              <a href="tel:+33647732184">+33 6 47 73 21 84</a>
             </div>
           </div>
         </div>

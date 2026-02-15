@@ -116,6 +116,13 @@ button.submit-form:hover {
   gap: 0.4vh;
 }
 
+.infos a {
+  text-decoration: none;
+}
+.infos a:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 768px) {
   input,
   textarea {
